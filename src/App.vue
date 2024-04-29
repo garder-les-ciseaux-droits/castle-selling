@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen bg-black overflow-y-auto overflow-x-hidden">
+  <div class="w-screen h-screen bg-black justify-center overflow-y-auto overflow-x-hidden">
     <div class="w-full h-[1000px]">
       <MainPage/>
     </div>
@@ -49,7 +49,8 @@ export default {
 
 <style>
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 0px;
+
 }
 
 ::-webkit-scrollbar-track {
