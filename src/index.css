@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face { 
+    font-family: "playfair"; 
+    src: url("/src/assets/Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf"); 
+} 
