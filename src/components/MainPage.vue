@@ -41,29 +41,35 @@
                
       </div>
       <div class="relative w-[1280px] h-[200px] md:h-[600px] mx-10 min-w-0 max-w-full">
-        <div class="w-full h-full">
+        <div class="w-full h-full min-w-0">
           <Carousel :autoplay="5000" :wrap-around="true">
             <Slide class="h-[200px] md:h-[600px] w-full min-w-0" v-for="(item, index) in castleData.availableEstates.filter(c => c.main === true)" :key="item.id">
               <img class="w-full h-full rounded-2xl" :src="item.pictures" />
-              <div class="bg-gradient-to-l from-black w-full absolute inset-0 flex justify-start items-center">
-                <h1 v-show="index === 0" class="hidden md:flex w-10 text-white font-playfair text-xl md:text-7xl ml-10 md:ml-24 drop-shadow-2xl">
-                  LUXURY CASTLES
-                </h1>
+              <div class="bg-gradient-to-l from-black md:w-full absolute inset-0 flex justify-start items-center min-w-0 min-h-0">
+                  
               </div>
-              <div class="w-full absolute inset-0 flex flex-col justify-center items-end space-y-4 md:space-y-10">
-                <div class="w-full h-1/2 flex flex-col justify-end items-end space-y-1 md:space-y-4">
-                  <h1 class="text-white font-playfair text-xl md:text-4xl mr-10 md:mr-24 drop-shadow-md">
+              <div class="w-1/2 left-0 h-full absolute flex text-start">
+                <div class="w-full flex h-full items-center justify-center md:pl-20 ">
+                  <h1 v-show="index === 0" class="hidden md:flex  w-full text-white font-playfair text-wrap text-xl md:text-5xl drop-shadow-2xl min-w-0 max-h-full">
+                    LUXURY CASTLES
+                  </h1>
+                </div>
+              </div>
+              <div class="w-1/2 h-full absolute right-0 flex flex-col justify-center items-end space-y-4 md:space-y-10 text-end">
+                <div class="w-full flex flex-col items-end space-y-1 md:space-y-4 pr-10 md:pr-20">
+                 
+                  <h1 class="text-white font-playfair text-lg md:text-4xl drop-shadow-md">
                     {{ item.name }}
                   </h1>
-                  <h2 class="text-white font-playfair text-base md:text-2xl mr-10 md:mr-24">
+                  <h2 class="text-white font-playfair text-xs md:text-2xl">
                     {{ item.location }}
                   </h2>
-                  <h3 class="text-white font-playfair text-base md:text-4xl mr-10 md:mr-24">
+                  <h3 class="text-white font-playfair text-xs md:text-4xl">
                     {{ item.price }}€
                   </h3>
                 </div>
-                <div class="flex w-full h-1/4 justify-end items-start">
-                  <button class="bg-white rounded-xl w-24 h-8 md:w-36 md:h-12 mr-10 md:mr-24 md:text-base text-xs hover:bg-[#181818] hover:text-white">
+                <div class="flex w-full justify-end items-start pr-10 md:pr-20">
+                  <button class="bg-white rounded-xl w-24 h-8 md:w-36 md:h-12 md:text-base text-xs hover:bg-[#181818] hover:text-white">
                     Learn more
                   </button>
                 </div>
