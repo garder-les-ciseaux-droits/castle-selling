@@ -1,12 +1,12 @@
 <template>
   <div class="w-screen h-screen bg-black justify-center overflow-y-auto overflow-x-hidden">
-    <div class="w-full h-[1000px]">
+    <div class="w-full h-[560px] md:h-[1000px]">
       <MainPage/>
     </div>
-    <div class="w-full h-[660px] mt-10">
+    <div class="w-full h-[560px] md:h-[660px] mt-0 md:mt-10">
       <AboutUs/>
     </div>
-    <div class="w-full h-[700px] bg-gradient-to-b from-black to-white mt-10">
+    <div class="w-full h-[500px] md:h-[700px] bg-gradient-to-b from-black to-white mt-10">
       <OurRegions/>
     </div>
     <div class="w-full h-[320px]">

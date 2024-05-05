@@ -1,11 +1,11 @@
 <template>
-    <div class="w-full h-full flex flex-col">
+    <div class="w-full h-full flex flex-col min-w-0 max-w-full">
         <div class="w-full h-[150px] flex flex-col items-center justify-center">
             <img class="w-36 h-36" src="/src/assets/Logo/castleLogoWithTextWhite.png"/>
         </div>
         <div class="w-full h-[50px] flex justify-center items-start">
             <nav class="flex w-full h-full justify-center items-center  font-playfair">
-                <div class="w-full h-full flex items-start justify-center space-x-16 text-sm">
+                <div class="w-full h-full flex items-start justify-center space-x-4 md:space-x-16 text-sm">
                 <a class="text-white font-playfair">CASTLES</a>
                 <a class="text-white font-playfair">MANOR HOUSES</a>
                 <a class="text-white font-playfair">SERVICES</a>
