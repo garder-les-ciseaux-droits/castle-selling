@@ -33,7 +33,7 @@
             </svg>
           </button>
           <button class="w-[100px] h-[40px] md:flex hidden rounded-xl bg-white justify-center items-center hover:bg-[#181818] hover:text-white text-black">
-            <p class="text-sm">Catalog</p>
+            <p class="text-sm w-full h-full"><a class="w-full h-full flex justify-center items-center" href="#/catalog">Catalog</a></p>
           </button>  
         </div>
       </div>
@@ -43,7 +43,7 @@
       <div class="relative w-[1280px] h-[200px] md:h-[600px] mx-10 min-w-0 max-w-full">
         <div class="w-full h-full min-w-0">
           <Carousel :autoplay="5000" :wrap-around="true">
-            <Slide class="h-[200px] md:h-[600px] w-full min-w-0" v-for="(item, index) in castleData.availableEstates.filter(c => c.main === true)" :key="item.id">
+            <Slide class="h-[200px] md:h-[600px] w-full min-w-0" v-for="(item, index) in castleData.specialEstates" :key="item.id">
               <img class="w-full h-full rounded-2xl" :src="item.pictures" />
               <div class="bg-gradient-to-l from-black md:w-full absolute inset-0 flex justify-start items-center min-w-0 min-h-0">
                   
@@ -83,8 +83,8 @@
         </div>
       </div>
       <div class="w-[1280px] h-[160px] md:h-[220px] mt-12 min-w-0 max-w-full flex">
-        <Carousel class="w-full h-full" :wrap-around="true"  :breakpoints="breakpoints" v-bind="settings"  :transition="500">
-          <Slide class="w-full md:w-[300px] h-full flex flex-col" v-for="item in castleData.availableEstates.filter(c => c.main === false)" :key="item.id">
+        <Carousel :autoplay="10000" class="w-full h-full" :wrap-around="true"  :breakpoints="breakpoints" v-bind="settings"  :transition="500">
+          <Slide class="w-full md:w-[300px] h-full flex flex-col" v-for="item in castleData.availableEstates" :key="item.id">
               <img class="w-[200px] md:w-full h-[130px] md:h-[160px] rounded-2xl" :src="item.pictures" />
               <div class="text-white w-[300px] flex justify-center mt-2">
                 <h1 class="text-white font-playfair text-base drop-shadow-md">
@@ -152,10 +152,38 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
 .carousel__slide {
   padding: 5px;
 }
+
+.carousel__viewport {
+  perspective: 2000px;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: 0.5s;
+}
+
+
+
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
 
 </style>

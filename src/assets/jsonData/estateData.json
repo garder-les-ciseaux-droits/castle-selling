@@ -1,20 +1,6 @@
 {
     "availableEstates": [
         {
-            "name": "Castle Neuschwanstein", 
-            "location": "Bavaria, Germany",
-            "price": "225,000,000",
-            "pictures": ["https://raw.githubusercontent.com/garder-les-ciseaux-droits/echidna/main/uploads/lanju-fotografie-cvS-IDyGKTE-unsplash.jpg"],
-            "main": true
-        },
-        {
-            "name": "Hampton Court Castle", 
-            "location": "United Kingdom",
-            "price": "45,000,000",
-            "pictures": ["https://raw.githubusercontent.com/garder-les-ciseaux-droits/echidna/main/uploads/tobias-rademacher-uUHp_T2HhkM-unsplash.jpg"],
-            "main": true
-        },
-        {
             "name": "Eilean Donan Castle", 
             "location": "United Kingdom",
             "price": "58,000,000",
@@ -80,6 +66,22 @@
         
         
         
+    ],
+    "specialEstates": [
+        {
+            "name": "Castle Neuschwanstein", 
+            "location": "Bavaria, Germany",
+            "price": "225,000,000",
+            "pictures": ["https://raw.githubusercontent.com/garder-les-ciseaux-droits/echidna/main/uploads/lanju-fotografie-cvS-IDyGKTE-unsplash.jpg"],
+            "main": true
+        },
+        {
+            "name": "Hampton Court Castle", 
+            "location": "United Kingdom",
+            "price": "45,000,000",
+            "pictures": ["https://raw.githubusercontent.com/garder-les-ciseaux-droits/echidna/main/uploads/tobias-rademacher-uUHp_T2HhkM-unsplash.jpg"],
+            "main": true
+        }
     ]
 
 }
